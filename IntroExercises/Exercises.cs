@@ -38,7 +38,7 @@ namespace IntroExercises
         public static int Find(int[] array, int value, int startIndex, int endIndex)
         {
             if(endIndex < startIndex) return -1;
-            
+            return 0;
         }
 
         //TODO #4
@@ -47,7 +47,13 @@ namespace IntroExercises
 
         public static int Count(int[] array, int value, int startIndex, int endIndex)
         {
-            return 0;
+            if (startIndex > endIndex || startIndex < 0 || endIndex > array.Length - 1) return 0;
+            int c = 0;
+            for (int i = startIndex; i < endIndex; i++)
+            {
+                if (array[i] == value) c++;
+            }
+            return c;
         }
 
         //TODO #5
