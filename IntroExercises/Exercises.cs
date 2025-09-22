@@ -23,6 +23,7 @@ namespace IntroExercises
         //Count should return the number of times value appears in array. 0 if the array is empty/null
         public static int Count(int[] array, int value)
         {
+            if (array == null) return 0;
             int pivot = 0;
             for (int i=0; i<array.Length; i++)
             {
