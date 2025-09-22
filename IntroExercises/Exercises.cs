@@ -66,6 +66,11 @@ namespace IntroExercises
         //  AreEqual(null, null) => false
         public static bool AreEqual(int[] A, int[] B)
         {
+            if (A.Length != B.Length || A == null || B == null) return false;
+            for (int i = 0; i < A.Length; i++)
+            {
+                if (A[i] != B[i]) return false;
+            }
             return true;
         }
     }
